@@ -6,6 +6,11 @@
   "browserslist": [
     "last 2 Chrome versions"
   ],
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "rm -rf dist && parcel build --public-url '.' index.html",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
   "dependencies": {
     "twgl.js": "^4.4.0"
   },
